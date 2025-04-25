@@ -1,0 +1,222 @@
+@charset "UTF-8";
+
+
+/*
+================================================================================================================================================================
+================================================================================================================================================================
+================================================================================================================================================================
+                                       
+										
+										SPIN LOGO  (CAR DASH and WRIST DISPLAY)
+	
+							  
+================================================================================================================================================================
+================================================================================================================================================================
+================================================================================================================================================================
+*/
+
+#TRIGGER {
+display:block
+}
+
+#TRIGGER:hover + #SHOW-HIDE {
+display:block
+}
+
+#SHOW-HIDE {
+display:none
+}
+
+.spincontainer {
+position:relative;
+top:0;
+left:0;
+width:100%;
+height:550px
+}
+
+/*   (SAVE)  CAR DASH  - IMAGE WINDOW 2 */
+
+/*   (SAVE)  530 Width NO DISPLAY >> CAR DASH IMAGE */
+
+.imagewindow2 {
+background:url(../img/insertionimages/cardashboard.jpg) center center / cover no-repeat;
+height:550px
+}
+
+/*   (SAVE)  WRIST DISPLAY - IMAGE WINDOW 3 */
+
+/*   (SAVE)  530 Width NO DISPLAY >> SPIN LOGO >> SPIN COPY BOX  */
+
+/*   (SAVE)  531+ Width Equals >> HIGH 550px IMAGE, Plus  >> SPIN LOGO, PLus >> SPIN COPY BOX When Opened.    */
+
+.imagewindow3 {
+background:url(../img/insertionimages/wristdisplay.jpg) center center / cover no-repeat;
+height:550px
+}
+
+/*   (SAVE)  NO DISPLAY >> SPIN LOGO, >> SPIN COPY BOX.AT 530w or BELOW.  id="NO530"  */
+
+/*   (SAVE)  530+ Width Equals >> LOW 400px IMAGE    */
+
+/*   (SAVE)  SOME Mobile Widths to Consider Here:
+
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	
+	768 WIDTH - IPAD
+
+	600 WIDTH - Nexus 7
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  531 w BREAK  (HIGH HEIGHT  - 550 h)
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  530 w BREAK  (LOW HEIGHT 1 - 338 h)
+
+	[530 WIDTH =  338 HEIGHT is the Hieght of the IMAGE GRID.  It is a good Height. ]
+
+	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  530 w BREAK  (LOW HEIGHT 1 - 305 h)
+	
+	[480 WIDTH =  305 HEIGHT is the Hieght of the IMAGE GRID.  It is a good Height. ]
+	
+	[320 WIDTH =  305 MINIMUM HEIGHT. ]
+	
+	
+	414 WIDTH - iPhone 7+
+
+	411 WIDTH - Nexus 6P
+
+	375 WIDTH - iPhone 6
+
+	360 WIDTH - Galaxy S4
+	
+	
+
+	320 WIDTH - iPhone 4
+
+	320 WIDTH - iPhone 5
+
+*/
+
+@media only screen and (max-width: 530px) {
+.imagewindow3 {
+height: 338px;
+}
+}
+
+@media only screen and (max-width: 480px) {
+.imagewindow3 {
+height: 305px;
+min-height: 305px;
+}
+}
+
+.view {
+position:absolute;
+top:8%;
+right:15%;
+width:400px;
+height:450px;
+background:none;
+overflow:hidden
+}
+
+.textsquare {
+position:absolute;
+margin:auto;
+top:0;
+bottom:0;
+right:0;
+left:0;
+width:390px;
+height:450px;
+background-color:#FFF
+}
+
+.textsquareheadline {
+position:relative;
+top:0;
+left:0;
+width:270px;
+height:150px;
+padding-top:20px;
+padding-left:20px;
+line-height:42px;
+background-color:#FFF
+}
+
+.textsquarecopy {
+position:relative;
+top:0;
+left:0;
+width:380px;
+height:250px;
+padding-top:40px;
+padding-left:20px;
+padding-right:20px;
+text-align:left
+}
+
+@media screen and (max-width: 1087px) {
+.textsquarecopy {
+text-align:left
+}
+}
+
+h500 {
+font-family:'Work Sans',sans-serif;
+font-size:100%;
+line-height:18px;
+color:#0D0D0D;
+-webkit-font-smoothing:antialiased;
+font-size:16px;
+font-weight:300
+}
+
+.animation-box {
+position:absolute;
+top:15%;
+right:18%;
+width:64px;
+height:64px;
+background-color:none;
+z-index:5;
+!important/avoidflickering/-webkit-backface-visibility:hidden;
+-webkit-perspective:1000
+}
+
+.animation-box:hover {
+-webkit-transition-duration:.3s;
+transition-duration:.3s;
+transform:rotate(-90deg);
+-webkit-transform:rotate(-90deg);
+-moz-transform:rotate(-90deg)
+}
+
+.cross-button {
+position:absolute;
+width:64px;
+height:64px;
+cursor:hand;
+cursor:pointer;
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+overflow:hidden
+}
+
+.cross-h,.cross-v {
+position:absolute;
+background-color:#fff
+}
+
+.cross-h {
+width:100%;
+height:4px;
+top:50%;
+margin-top:-2px
+}
+
+.cross-v {
+left:50%;
+width:4px;
+height:100%;
+margin-left:-2px
+}

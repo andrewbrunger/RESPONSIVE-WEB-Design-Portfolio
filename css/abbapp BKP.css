@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/*
+================================================================================================================================================================
+================================================================================================================================================================
+================================================================================================================================================================
+                                       
+										
+										IPHONE APP
+	
+							  
+================================================================================================================================================================
+================================================================================================================================================================
+================================================================================================================================================================
+*/
+
+.magical.iphone[data-expand-from="right"] {
+text-align:right;
+position:relative
+}
+
+.magical.iphone[data-expand-from="right"] img:first-child {
+position:relative;
+float:right
+}
+
+.magical.iphone[data-expand-from="right"] img {
+position:absolute;
+top:0;
+right:0;
+max-height:450px;
+width:auto;
+-webkit-transition:right 1.2s ease-in-out;
+-moz-transition:right 1.2s ease-in-out;
+-ms-transition:right 1.2s ease-in-out;
+-o-transition:right 1.2s ease-in-out;
+transition:right 1.2s ease-in-out
+}
+
+.magical.iphone[data-expand-from="left"] {
+text-align:left;
+position:relative
+}
+
+.magical.iphone[data-expand-from="left"] img:first-child {
+position:relative
+}
+
+.magical.iphone[data-expand-from="left"] img {
+position:absolute;
+top:0;
+left:0;
+max-height:450px;
+width:auto;
+-webkit-transition:left 1.2s ease-in-out;
+-moz-transition:left 1.2s ease-in-out;
+-ms-transition:left 1.2s ease-in-out;
+-o-transition:left 1.2s ease-in-out;
+transition:left 1.2s ease-in-out
+}
+
+.magical.iphone.open img {
+-webkit-transition:top .3s ease-in-out;
+-moz-transition:top .3s ease-in-out;
+-ms-transition:top .3s ease-in-out;
+-o-transition:top .3s ease-in-out;
+transition:top .3s ease-in-out
+}
+
+.home .magical.iphone.open img:hover {
+top:-30px!important
+}
+
+@media only screen and (max-width: 320px) {
+.magical.iphone[data-expand-from="right"] img {
+max-height:350px;
+padding-right:30px
+}
+}
