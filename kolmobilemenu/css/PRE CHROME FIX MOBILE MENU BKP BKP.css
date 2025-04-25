@@ -1,0 +1,289 @@
+@charset "UTF-8";
+
+/*
+
+As an INDEPENDENT MOBILE MENU,
+
+>>  This menu requires you to activate   "JUST SMOOTH SCROLL [NO TOP OFFSET]" in "abbnav.js".
+
+>>  You don't need to worry about the Desktop Top Offset, and that No Top Offset is required for Small Mobile [no Ter 1 Nav],
+    as this is not connected in any way to your main navigation system.
+	
+*/	
+
+/**************************************************************************************************** */
+/****************************************  KOL MOBILE MENU           ******************************** */
+/**************************************************************************************************** */
+
+/**************************************************************************************************** */
+/****************************************  !!  SOLVE FOR CHROME          **************************** */
+/**************************************************************************************************** */
+
+#showhidevertical {
+	
+	     	position:fixed !important;
+   
+   			left: 30px;
+			
+			bottom: 30px;
+	
+			width: 200px;
+		
+		   	height: 200px;	
+		   
+		   	background-color: none; 
+			
+			z-index: 5000;
+  
+}
+
+/**************************************************************************************************** */
+/****************************************  FLIP AT 1025 WIDTH         ******************************* */
+/**************************************************************************************************** */
+
+@media only screen and (min-width: 1025px) {
+   
+#mobile_menu_toggle {
+ 
+ 		display: none;
+
+}
+ 
+}
+
+/*************************************************************** */
+/*                     MENU TOGGLE                      		 */
+/*************************************************************** */
+
+#mobile_menu_toggle {
+	
+		/*ABB FIX THE MOBILE NAV OPEN_CLOSE IN BOTTOM LEFT OF SCREEN*/
+	
+    	position:fixed !important;
+		
+    	position: absolute; /*ie6 Fix*/
+   
+   		left: 0;
+		
+   		bottom: 0;
+	
+  		color: #fff;
+		
+  		/*ABB SET BACKGROUND COLOR of MOBILE NAV OPEN_CLOSE*/
+  
+  		background-color:#F00;
+	
+		padding-top: 15px;
+    	padding-bottom: 10px;
+
+    	padding-left: 15px;
+    	padding-right: 15px;
+			
+  		-webkit-transform: rotate(90deg);
+  		-moz-transform: rotate(90deg);
+  		-ms-transform: rotate(90deg);
+  
+  		transform: rotate 90deg;
+  
+  		font-family: "Mono";
+  		text-transform: uppercase;
+  		
+		margin: 50px 0px;
+  		cursor: pointer; 
+
+		z-index: 9999;
+		
+}
+		
+#mobile_menu_toggle.home_menu {
+	
+    	position: absolute; 
+	
+}
+	
+#mobile_menu_toggle.mobile_menu_toggle_internal {
+	
+    	color: #000; 
+	
+}
+
+#mobile_menu_toggle.mobile_menu_toggle_internal.open {
+	
+      	color: #fff; 
+	  
+}
+	  
+#mobile_menu_toggle .menu_label {
+	
+    	width: 55px;
+	
+    	display: inline-block; 
+
+}
+
+#mobile_menu_toggle .close_label {
+	
+    	display: none; 
+	
+}
+
+
+#mobile_menu_toggle .plus {
+	
+    	display: inline-block; 
+		
+		font-size: 20px;											
+	
+}
+
+#mobile_menu_toggle .plus.close {
+	
+		/* THIS IS THE FIX FOR THE BLUE !!!!!!  */    				/*ABB INSERTED.  */
+		/* height: 33px; !important             */
+		
+		height: 33px; !important 
+	
+      	-ms-transform: rotate(45deg);
+      	/* IE 9 */
+	  
+      	-webkit-transform: rotate(45deg);
+      	/* Chrome, Safari, Opera */
+	  
+      	transform: rotate(45deg); 
+	  
+}
+
+/*************************************************************** */
+/*                     MOBILE MENU DISPLAY AREA                  */
+/*************************************************************** */
+
+#mobile_menu {
+	
+  		display: none;
+  
+  		position: fixed;
+		
+  		top: 0;
+  		left: 0;
+  
+  		background: #000;
+  
+  		width: 40%;
+  
+  		min-height: 100%; 
+
+  		z-index: 5; !important 
+}
+
+#mobile_menu ul {
+	
+		
+		position: fixed;    										/*ABB INSERTED.  */
+		
+		bottom: 200px;  											 /*ABB INSERTED.  */												
+		
+		left: 20px;													/*ABB INSERTED.  */
+	
+}
+
+#mobile_menu ul li a {
+	
+      	color: #fff;
+		
+  		font-family:"roboto", Arial, Helvetica, sans-serif;			/*ABB INSERTED.  */
+  
+  		font-size: 25px;     										/*ABB INSERTED.  */
+  	
+  		font-weight: 100;   										/*ABB INSERTED.  */
+  
+  		line-height: 50px;											/*ABB INSERTED.  */
+	  
+}
+
+@media only screen and (max-width: 767px) {
+
+#mobile_menu ul li a {
+  
+  		font-size: 20px;     										/*ABB INSERTED.  */
+  
+  		line-height: 50px;											/*ABB INSERTED.  */
+	  
+}	
+		
+}
+
+/*   *****************************  641 PX to 767 PX  ***********************    */
+ 
+@media only screen and (min-width: 641px) and (max-width: 767px) {
+   
+#mobile_menu {
+  
+  		width: 30%;
+
+} 
+
+}
+
+/*   *****************************  482 PX to 640 PX  ***********************    */
+ 
+@media only screen and (min-width: 482px) and (max-width: 640px) {
+   
+#mobile_menu {
+	
+  		width: 40%;
+
+}
+  
+}
+
+/*   *****************************  421 PX to 481 PX  ***********************    */
+ 
+@media only screen and (min-width: 421px) and (max-width: 481px) {
+   
+#mobile_menu {
+	
+  		width: 50%;
+
+}
+
+}
+
+/*   *****************************  365 PX to 420 PX  ***********************    */
+ 
+@media only screen and (min-width: 365px) and (max-width: 420px) {
+   
+#mobile_menu {
+  
+  		width: 60%;
+
+} 
+
+}
+
+/*   *****************************  322 PX to 364 PX  ***********************    */
+ 
+@media only screen and (min-width: 322px) and (max-width: 364px) {
+   
+#mobile_menu {
+	
+  		width: 60%;
+
+} 
+
+}
+
+/*  *****************************  SMALLER THAN 321 PX   ***********************     */
+ 
+@media only screen and (max-width: 321px) {
+   
+#mobile_menu {
+  
+  	width: 60%;
+
+}
+ 
+}
+
+
+
+	

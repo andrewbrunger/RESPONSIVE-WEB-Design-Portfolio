@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+/*
+================================================================================================================================================================
+================================================================================================================================================================
+================================================================================================================================================================
+                                       
+										
+										KOL MENU
+	
+							  
+================================================================================================================================================================
+================================================================================================================================================================
+================================================================================================================================================================
+*/
+
+#show640VERTICAL {
+position:fixed;
+left:0;
+bottom:59px;
+width:95px;
+height:37px;
+opacity:0;
+visibility:hidden;
+overflow:hidden;
+z-index:700;
+-webkit-transform:rotate(90deg);
+-moz-transform:rotate(90deg);
+-ms-transform:rotate(90deg);
+transform:rotate 90deg;
+transition:visibility 0 .5s,opacity .55s linear
+}
+
+#show640VERTICAL.show {
+visibility:visible;
+cursor:pointer;
+opacity:1;
+transition:opacity .55s linear
+}
+
+@media only screen and (min-width: 1025px) {
+#show640VERTICAL.show {
+opacity:0;
+visibility:hidden
+}
+
+#mobile_menu {
+opacity:0;
+visibility:hidden
+}
+}
+
+@media screen and (max-width: 530px) {
+#show640VERTICAL.show {
+left:-15px
+}
+}
+
+#mobile_menu_toggle {
+position:relative;
+left:0;
+bottom:0;
+color:#fff;
+background-color:red;
+font-family:"Mono";
+text-transform:uppercase;
+cursor:pointer;
+
+z-index:9999;
+
+padding:15px 15px 10px
+}
+
+#mobile_menu_toggle.home_menu {
+position:absolute
+}
+
+#mobile_menu_toggle.mobile_menu_toggle_internal {
+color:#000
+}
+
+#mobile_menu_toggle.mobile_menu_toggle_internal.open {
+color:#fff
+}
+
+#mobile_menu_toggle .menu_label {
+width:55px;
+display:inline-block;
+margin-top:4px
+}
+
+@media screen and (max-width: 530px) {
+#mobile_menu_toggle .menu_label {
+margin-top:8px
+}
+}
+
+#mobile_menu_toggle .close_label {
+display:none
+}
+
+#mobile_menu_toggle .plus {
+display:inline-block;
+font-size:20px
+}
+
+#mobile_menu_toggle .plus.close {
+height:33px;
+!important-ms-transform:rotate(45deg);
+-webkit-transform:rotate(45deg);
+transform:rotate(45deg)
+}
+
+@-moz-document url-prefix() { 
+
+}
+
+#mobile_menu_toggle .menu_label {
+	
+    	width: 255px;
+	
+}
+
+#mobile_menu {
+display:none;
+position:fixed;
+top:0;
+left:0;
+background:#000;
+width:40%;
+min-height:100%;
+z-index:500;
+}
+
+#mobile_menu ul {
+position:fixed;
+bottom:200px;
+left:20px
+}
+
+#mobile_menu ul li a {
+color:#fff;
+font-family:"roboto",Arial,Helvetica,sans-serif;
+font-size:25px;
+font-weight:100;
+line-height:50px
+}
+
+@media only screen and (max-width: 767px) {
+#mobile_menu ul li a {
+font-size:20px;
+line-height:50px
+}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 767px) {
+#mobile_menu {
+width:30%
+}
+}
+
+@media only screen and (min-width: 482px) and (max-width: 640px) {
+#mobile_menu {
+width:40%
+}
+}
+
+@media only screen and (min-width: 421px) and (max-width: 481px) {
+#mobile_menu {
+width:50%
+}
+}
+
+@media only screen and (min-width: 365px) and (max-width: 420px) {
+#mobile_menu {
+width:60%
+}
+}
+
+@media only screen and (min-width: 322px) and (max-width: 364px) {
+#mobile_menu {
+width:60%
+}
+}
+
+@media only screen and (max-width: 321px) {
+#mobile_menu {
+width:60%
+}
+}
